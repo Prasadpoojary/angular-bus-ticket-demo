@@ -1,0 +1,38 @@
+a
+{
+    text-decoration: none;
+    color:unset;
+}
+.container 
+{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    top:100px;
+    width:500px;
+    border:2px solid #888;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+}
+
+
+.row-two 
+{
+color:#fa780f;
+font-size: 22px;
+
+}
+
+p
+{
+font-size: 14px;
+margin-top: 3px;
+}
+
+p span 
+{
+color:#fa780f;
+}
+

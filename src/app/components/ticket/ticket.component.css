@@ -1,0 +1,51 @@
+.container
+{
+    position: absolute;
+    left:50%;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-50%);
+    top:100px;
+    
+}
+
+table 
+{
+    border-collapse: collapse;
+
+}
+
+thead 
+{
+    background:#cfcfcf;
+}
+
+
+
+tbody td 
+{
+    padding:8px 30px;
+    font-size: 13px;
+    text-align: center;
+}
+
+tr.dark 
+{
+    font-weight: bold;
+}
+
+button
+{
+width:100px;
+position: absolute;
+bottom:-50px;
+left:50%;
+transform: translateX(-50%);
+outline: none;
+border:none;
+padding:5px;
+border-radius: 5px;
+color:#fff;
+background:#2cac23;
+cursor: pointer;
+}

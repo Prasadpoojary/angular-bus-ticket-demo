@@ -1,0 +1,44 @@
+.container 
+{
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    top:100px;
+    width:500px;
+    border:2px solid #888;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.row-one, .row-two,.row-three
+{
+    display: flex;
+}
+.row-one
+{
+    justify-content: space-around;
+}
+
+.row-two,.row-three
+{
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+input
+{
+    border:1px solid #888;
+    padding:5px 10px;
+}
+
+button 
+{
+    height: 30px;
+    color:#ffffff;
+    background:#000;
+    cursor: pointer;
+    border-radius: 5px;
+}

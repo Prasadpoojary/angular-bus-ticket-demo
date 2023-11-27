@@ -1,0 +1,39 @@
+.container
+{
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    top:100px;
+}
+
+table 
+{
+    border-collapse: collapse;
+
+}
+
+thead 
+{
+    background:#cfcfcf;
+}
+
+th
+{
+    padding: 2px 20px;
+}
+
+tbody td 
+{
+    padding:5px 2px;
+    font-size: 13px;
+}
+
+tbody td a 
+{
+    margin:20px 15px;
+    text-decoration: none;
+    background-color: #b21152;
+    color:#fff;
+    border-radius: 5px;
+    padding:4px;
+}

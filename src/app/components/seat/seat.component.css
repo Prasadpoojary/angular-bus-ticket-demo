@@ -1,0 +1,86 @@
+.container 
+{
+    position: relative;
+    left:50%;
+    width:500px;
+    transform: translateX(-50%);
+    top:100px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.seats 
+{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.seat-row 
+{
+    width:150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.seat-row i 
+{
+    color:#dcdcdc;
+    cursor: pointer;
+}
+
+.seat-row i.selected 
+{
+    color:#65d958;
+}
+table 
+{
+    border-collapse: collapse;
+
+}
+
+thead 
+{
+    background:#cfcfcf;
+}
+
+th
+{
+    padding: 2px 20px;
+}
+
+tbody td 
+{
+    padding:8px 10px;
+    font-size: 13px;
+}
+
+.total 
+{
+    margin-top: 50px;
+    
+}
+
+.amount
+{
+    background:#dcdcdc;
+    padding:5px;
+    text-align: center;
+}
+
+.confirm 
+{
+    margin-top: 10px;
+}
+
+.confirm button 
+{
+    width: 100%;
+    color:#fff;
+    background:#4848e8;
+    padding:5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius:5px;
+}
