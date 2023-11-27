@@ -13,7 +13,7 @@ const routes: Routes = [
     component: SearchComponent,
   },
   {
-    path: 'bus/:from/:to',
+    path: 'bus/:from/:to/:time',
     component: BuslistComponent,
   },
   {
