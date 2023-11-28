@@ -1,17 +1,17 @@
-<a href="">
+<a [routerLink]="['/ticket',ticket.id]">
     <div class="container">
         <div class="row-one">
              <h3>Journey Details</h3>
         </div>
         <hr>
         <div class="row-two">
-            <h3>Pune To Bangalore</h3>
+            <h3 style="text-transform: capitalize;">{{ticket.from}} To {{ticket.to}}</h3>
         </div>
         <div class="row-three">
-            <p>Date & Time : 2023-01-13:10:00 PM</p>
-            <p>Royal Bus</p>
-            <p>Coach Type : AC</p>
-            <p>Seats No (<span>C1,C2,</span>)</p>
+            <p>Date & Time : {{ticket.date}}:{{ticket.bustime}}</p>
+            <p>{{ticket.busname}}</p>
+            <p>Coach Type : {{ticket.buscoach}}</p>
+            <p>Seats No (<span>{{ticket.seat}}</span>)</p>
         </div>
        
     </div>

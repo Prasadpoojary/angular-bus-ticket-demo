@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="!showUserForm">
         
     <div class="seats">
         <h3>Select Seat</h3>
@@ -6,44 +6,44 @@
             <p><i style="color:black;" class="fa-solid fa-circle-chevron-up"></i></p>
         </div>
         <div class="seat-row">
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C1');" [ngClass]="{'selected':contains('C1')}"></i>
+                <i class="fas fa-couch" (click)="select('C2');" [ngClass]="{'selected':contains('C2')}"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C3');" [ngClass]="{'selected':contains('C3')}"></i>
+                <i class="fas fa-couch" (click)="select('C4');" [ngClass]="{'selected':contains('C4')}"></i></p>
         </div>
         <div class="seat-row">
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C5');" [ngClass]="{'selected':contains('C5')}"></i>
+                <i class="fas fa-couch" (click)="select('C6');" [ngClass]="{'selected':contains('C6')}"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C7');" [ngClass]="{'selected':contains('C7')}"></i>
+                <i class="fas fa-couch" (click)="select('C8');" [ngClass]="{'selected':contains('C8')}"></i></p>
         </div>
         <div class="seat-row">
-            <p> <i  class="fas fa-couch selected"></i>
-                <i class="fas fa-couch"></i></p>
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
+            <p> <i  class="fas fa-couch" (click)="select('C9');" [ngClass]="{'selected':contains('C9')}"></i>
+                <i class="fas fa-couch" (click)="select('C10');" [ngClass]="{'selected':contains('C10')}"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C11');" [ngClass]="{'selected':contains('C11')}"></i>
+                <i class="fas fa-couch" (click)="select('C12');" [ngClass]="{'selected':contains('C12')}"></i></p>
         </div>
         <div class="seat-row">
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C13');" [ngClass]="{'selected':contains('C13')}"></i>
+                <i class="fas fa-couch" (click)="select('C14');" [ngClass]="{'selected':contains('C14')}"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C15');" [ngClass]="{'selected':contains('C15')}"></i>
+                <i class="fas fa-couch" (click)="select('C16');" [ngClass]="{'selected':contains('C16')}"></i></p>
         </div>
         <div class="seat-row">
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C17');" [ngClass]="{'selected':contains('C17')}"></i>
+                <i class="fas fa-couch" (click)="select('C18');" [ngClass]="{'selected':contains('C18')}"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C19');" [ngClass]="{'selected':contains('C19')}"></i>
+                <i class="fas fa-couch" (click)="select('C20');" [ngClass]="{'selected':contains('C20')}"></i></p>
         </div>
         <div class="seat-row">
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
-            <p> <i class="fas fa-couch"></i>
-                <i class="fas fa-couch"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C21');" [ngClass]="{'selected':contains('C21')}"></i>
+                <i class="fas fa-couch" (click)="select('C22');" [ngClass]="{'selected':contains('C22')}"></i></p>
+            <p> <i class="fas fa-couch" (click)="select('C23');" [ngClass]="{'selected':contains('C23')}"></i>
+                <i class="fas fa-couch" (click)="select('C24');" [ngClass]="{'selected':contains('C24')}"></i></p>
         </div>
        
     </div>
-    <div class="details">
+    <div class="details" *ngIf="total!=0">
         <table border="1">
             <thead>
                 <th>Seat</th>
@@ -52,20 +52,40 @@
              
             </thead>
             <tbody>
-                <tr>
-                    <td>C1</td>
-                    <td>100</td>
-                    <td>AC</td>
+                <tr *ngFor="let seat of selectedSeat">
+                    <td>{{seat}}</td>
+                    <td>{{bus.fare}}</td>
+                    <td>{{bus.coach}}</td>
                 </tr>
             </tbody>
         </table>
         <div class="total">
             <div class="amount">
-                Total : 2000
+                Total : {{total}}
             </div>
             <div class="confirm">
-                <button>Confirm</button>
+                <button (click)="confirmSeat();">Confirm</button>
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-user" *ngIf="showUserForm">
+    <form [formGroup]="userForm" (ngSubmit)="confirmTicket();">
+    <div class="row-two">
+        <label>Username</label>
+        <input type="text" formControlName="username">
+    </div>
+    <div class="row-two">
+        <label>Mobile number</label>
+        <input type="number" formControlName="mobile" >
+    </div>
+    <div class="row-two">
+        <label>E-mail</label>
+        <input type="text" formControlName="email">
+    </div>
+    <div class="row-three">
+        <button>Submit</button>
+    </div>
+</form>
 </div>

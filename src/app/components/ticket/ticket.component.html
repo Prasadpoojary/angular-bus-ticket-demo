@@ -5,8 +5,8 @@
                 <td colspan="4">Online Reservation</td>
            </tr>
            <tr class="dark">
-                <td colspan="2">Pune Bangalore</td>
-                <td colspan="2">2023-10-20</td>
+                <td colspan="2" style="text-transform: capitalize;">{{ticket.from}} - {{ticket.to}}</td>
+                <td colspan="2">{{ticket.date}}</td>
            </tr>
            <tr class="dark">
                 <td>Passenger details</td>
@@ -15,10 +15,10 @@
                 <td>Total Fare</td>
            </tr>
            <tr>
-                <td>Edureka <br> 23234234 <br> adb@g.com</td>
-                <td>sdfsdw4234</td>
-                <td>C1,C2</td>
-                <td>2000</td>
+                <td>{{ticket.username}} <br> {{ticket.mobile}} <br> {{ticket.email}} </td>
+                <td>{{ticket.id}}</td>
+                <td>{{ticket.seat}}</td>
+                <td>{{ticket.total}}</td>
            </tr>
            <tr class="dark">
                 <td>Bus Name</td>
@@ -26,14 +26,14 @@
                 <td>Dept. Time</td>
             </tr>
             <tr>
-                <td>Durgamba </td>
+                <td>{{ticket.busname}} </td>
                 <td>30 mins before</td>
-                <td>10:00 PM</td>
+                <td>{{ticket.bustime}}</td>
             </tr>
             <tr style="color:red">
                 <td colspan="4">** Please bring this copy to ticket counter to take ticket</td>
            </tr>
        </tbody>
     </table>
-    <button>Print</button>
+    <button (click)="print();">Print</button>
 </div>

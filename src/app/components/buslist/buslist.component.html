@@ -9,13 +9,13 @@
             <th></th>
         </thead>
         <tbody>
-            <tr>
-                <td>Durgamba</td>
-                <td>10:00 PM</td>
-                <td>AC</td>
-                <td>36</td>
-                <td>1000</td>
-                <td><a href="">View Seats</a></td>
+            <tr *ngFor="let bus of busList">
+                <td>{{bus.name}}</td>
+                <td>{{bus.time}}</td>
+                <td>{{bus.coach}}</td>
+                <td>{{bus.seats}}</td>
+                <td>{{bus.fare}}</td>
+                <td><a [routerLink]="['/seat',bus.id,from,to,time]">View Seats</a></td>
             </tr>
         </tbody>
     </table>

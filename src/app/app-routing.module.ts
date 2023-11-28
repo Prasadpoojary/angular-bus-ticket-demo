@@ -5,7 +5,6 @@ import { BuslistComponent } from './components/buslist/buslist.component';
 import { SeatComponent } from './components/seat/seat.component';
 import { PreviewComponent } from './components/preview/preview.component';
 import { TicketComponent } from './components/ticket/ticket.component';
-import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
   {
@@ -17,12 +16,8 @@ const routes: Routes = [
     component: BuslistComponent,
   },
   {
-    path: 'seat/:busId',
+    path: 'seat/:busId/:from/:to/:time',
     component: SeatComponent,
-  },
-  {
-    path: 'user/:ticketId',
-    component: UserComponent,
   },
   {
     path: 'preview/:ticketId',

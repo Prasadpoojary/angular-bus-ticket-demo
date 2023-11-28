@@ -1,4 +1,94 @@
 {
-    "from": ["Udupi","Mangalore","Kundapura","Shirur"],
-    "to":["Bangalore","Mysore","Mumbai","Hydrabad"]
+  "from": [
+    "udupi",
+    "mangalore",
+    "kundapura",
+    "shirur"
+  ],
+  "to": [
+    "bangalore",
+    "mysore",
+    "mumbai",
+    "hydrabad"
+  ],
+  "bus": [
+    {
+      "id": 1,
+      "name": "Green line",
+      "time": "10:00 PM",
+      "coach": "AC",
+      "fare": 1000,
+      "seats": 24,
+      "from": "udupi",
+      "to": "bangalore"
+    },
+    {
+      "id": 2,
+      "name": "Red line",
+      "time": "8:00 AM",
+      "coach": "Non AC",
+      "fare": 2000,
+      "seats": 24,
+      "from": "mangalore",
+      "to": "mumbai"
+    },
+    {
+      "id": 3,
+      "name": "Blue line",
+      "time": "12:00 PM",
+      "coach": "Non AC",
+      "fare": 1500,
+      "seats": 24,
+      "from": "udupi",
+      "to": "bangalore"
+    },
+    {
+      "id": 4,
+      "name": "Yellow line",
+      "time": "6:00 AM",
+      "coach": "AC",
+      "fare": 2000,
+      "seats": 24,
+      "from": "udupi",
+      "to": "bangalore"
+    }
+  ],
+  "ticket": [
+    {
+      "id": "2SOPFKDJTBDTO4XJUGKU",
+      "busname": "Green line",
+      "buscoach": "AC",
+      "bustime": "10:00 PM",
+      "date": "2023-11-30",
+      "seat": [
+        "C1",
+        "C2"
+      ],
+      "username": "Prasad",
+      "mobile": 789471732,
+      "email": "prasad@mil.com",
+      "total": 2000,
+      "from": "udupi",
+      "to": "bangalore"
+    },
+    {
+      "id": "ZEN725QLPBFCM0AXVN0M",
+      "busname": "Green line",
+      "buscoach": "AC",
+      "bustime": "10:00 PM",
+      "date": "2023-11-30",
+      "seat": [
+        "C1",
+        "C3",
+        "C6",
+        "C10"
+      ],
+      "username": "Prasad",
+      "mobile": 8080808080,
+      "email": "prasad@poojary.com",
+      "total": 4000,
+      "from": "udupi",
+      "to": "bangalore"
+    }
+  ]
 }
